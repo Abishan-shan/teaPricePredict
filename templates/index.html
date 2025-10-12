@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>🌊 Wave - Tea Predictor</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+  <!-- Background Animation -->
+  <canvas id="wave-canvas"></canvas>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">🌊 Wave</div>
+    <nav>
+      <ul>
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Home Section -->
+  <section id="home" class="section">
+    <div class="overlay">
+      <h1 class="title">Tea Price Predictor</h1>
+      <p class="tagline">Your smart companion for forecasting daily tea trends 🍃</p>
+      <a href="{{ url_for('login') }}" class="btn">Start Prediction</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section about-section">
+    <div class="content">
+      <h2>About Wave 🌊</h2>
+      <p> Just as every leaf tells a story, Wave listens to the rhythm of tea markets through data. It transforms
+        numbers into insights, helping those who nurture, trade, and cherish tea understand tomorrow’s trends — today.
+      </p>
+      <p>
+        🍵 Whether you love Ceylon Black or Herbal Green or Green Tea, Wave ensures your next brew is backed by insight.
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section contact-section">
+    <div class="content">
+      <h2>Contact Us 📬</h2>
+      <p>We’d love to hear from you! Drop us a message below ☕</p>
+      <form class="contact-form">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea rows="4" placeholder="Your Message..." required></textarea>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <script src="{{ url_for('static', filename='js/particles.js') }}"></script>
+</body>
+</html>

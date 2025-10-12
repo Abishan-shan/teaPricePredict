@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Predict Tea Price</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/prediction.css') }}">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<div class="dashboard-container">
+  <aside class="sidebar">
+    <div class="logo">🌊 Wave</div>
+    <nav>
+      <ul>
+        <li><a href="{{ url_for('dashboard') }}">Dashboard</a></li>
+        <li><a href="{{ url_for('predict') }}">Predict Price</a></li>
+        {# <li><a href="{{ url_for('insights') }}">Tea Insights</a></li> #}
+        <li><a href="{{ url_for('logout') }}">Logout</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <main>
+    <h1>Predict Tea Price</h1>
+    <div class="split-container">
+
+      <!-- Left: Form -->
+      <div class="form-container">
+        <form method="POST">
+          <label>Select Tea Type:</label>
+          <select name="tea_type" required>
+            <option> </option>
+            {% for tea in tea_types %}
+            <option value="{{ tea }}">{{ tea }}</option>
+            {% endfor %}
+          </select>
+
+          <label>Pick a Date:</label>
+          <input type="date" name="picked_date" required>
+
+          <button type="submit">Predict</button>
+        </form>
+      </div>
+
+      <div class="result-container">
+        {% if result %}
+          <div class="prediction-card">
+            <h2>Predicted Price for </h2>
+            <h2>{{ tea_type }}</h2>
+            <p class="price">RS.{{ result }}</p>
+            <p>Predicted on {{ picked_date }}</p>
+          </div>
+        {% else %}
+          <div class="prediction-card placeholder">
+            <h2>Prediction will appear here</h2>
+          </div>
+        {% endif %}
+      </div>
+
+    </div>
+  </main>
+</div>
+</body>
+</html>

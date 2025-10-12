@@ -1,0 +1,182 @@
+body {
+margin:0;
+font-family:'Poppins',
+sans-serif;
+background:#0d0d0d;
+color:#fff;
+}
+
+.dashboard-container {
+display:flex;
+height:100vh;
+}
+
+.sidebar {
+  width:220px;
+  background:#1a1a1a;
+  padding:20px;
+  display:flex;
+  flex-direction:column;
+}
+.sidebar .logo {
+font-size:2em;
+margin-bottom:30px;
+color:#FFD700;
+text-align:center;
+}
+
+.sidebar ul {
+list-style:none;
+padding:0;
+}
+
+.sidebar ul li {
+margin:15px 0;
+}
+
+.sidebar ul li a {
+color:#fff;
+text-decoration:none;
+transition:0.3s;
+}
+
+.sidebar ul li a:hover {
+color:#FFD700;
+}
+
+
+
+main {
+    flex: 1;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+main h1 {
+    font-size: 36px;
+    color: #34495e;
+}
+
+
+.split-container {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.form-container {
+    flex: 1;
+    min-width: 280px;
+    background: #e0e5ec;
+    padding: 30px;
+    border-radius: 25px;
+    box-shadow: 3px 3px 5px #babecc, -3px -3px 5px #ffffff;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+form label {
+    font-weight: 600;
+    color: #34495e;
+}
+
+form select, form input[type="date"], form button {
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+    transition: 0.3s;
+}
+
+form select, form input[type="date"] {
+    background: #e0e5ec;
+    box-shadow: inset 5px 5px 10px #babecc, inset -5px -5px 10px #ffffff;
+}
+
+form select:focus, form input[type="date"]:focus {
+    box-shadow: inset 3px 3px 6px #babecc, inset -3px -3px 6px #ffffff, 0 0 5px #1abc9c;
+}
+
+form button {
+    background: linear-gradient(135deg, #1abc9c, #16a085);
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 5px 5px 10px #12876d, -5px -5px 10px #1fffd0;
+}
+
+form button:hover {
+    transform: translateY(-2px);
+    box-shadow: 6px 6px 12px #12876d, -6px -6px 12px #1fffd0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+form label {
+  font-weight: 600;
+  color: #34495e;
+  margin-bottom: 5px;
+}
+
+form select,
+form input[type="date"],
+form button {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+
+.result-container {
+    flex: 1;
+    min-width: 280px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.prediction-card {
+    background: #e0e5ec;
+    padding: 40px 50px;
+    border-radius: 25px;
+    box-shadow: 4px 4px 8px #babecc, -4px -4px 8px #ffffff;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+}
+
+.prediction-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 5px 5px 10px #babecc, -5px -5px 10px #ffffff;
+}
+
+.prediction-card h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #16a085;
+}
+
+.prediction-card .price {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #1abc9c;
+}
+
+.prediction-card p {
+    font-size: 16px;
+    color: #555;
+}
+
+.prediction-card.placeholder h2 {
+    color: #999;
+    font-weight: normal;
+}

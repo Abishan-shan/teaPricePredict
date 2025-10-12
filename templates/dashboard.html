@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Wave Dashboard</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="dashboard-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="logo">🌊 Wave</div>
+      <nav>
+        <ul>
+          <li><a href="{{ url_for('dashboard') }}">Dashboard</a></li>
+          <li><a href="{{ url_for('predict') }}">Predict Price</a></li>
+          <li><a href="{{ url_for('logout') }}">Logout</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main>
+      <h1>Welcome, {{ session['user'] }} 👋</h1>
+
+      <div class="cards">
+        <!-- Tea Type Selector -->
+        <div class="card tea-select">
+            <h3>Select Tea Type</h3>
+            <form method="get" id="tea-form">
+              <select name="tea_type" onchange="document.getElementById('tea-form').submit()">
+                {% for tea in tea_types %}
+                  <option value="{{ tea }}" {% if tea == selected_tea %}selected{% endif %}>{{ tea }}</option>
+                {% endfor %}
+              </select>
+            </form>
+        </div>
+
+
+        <!-- Last Prediction Date -->
+        <div class="card">
+          <h3>Last Prediction Date</h3>
+          <p id="last-date">{{ last_prediction_date }}</p>
+        </div>
+
+        <!-- Average Price -->
+        <div class="card">
+          <h3>Average Price</h3>
+          <p id="avg-price">RS.{{ avg_price }}</p>
+        </div>
+      </div>
+
+      <div class="chart-container">
+        <canvas id="weeklyChart"></canvas>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    const ctx = document.getElementById('weeklyChart').getContext('2d');
+    const weeklyChart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: {{ weekly_dates | safe }},
+        datasets: [{
+          label: '{{ selected_tea }} Price',
+          data: {{ weekly_prices | safe }},
+          backgroundColor: 'rgba(255, 215, 0, 0.2)',
+          borderColor: '#FFD700',
+          borderWidth: 2,
+          fill: true,
+          tension: 0.3,
+          pointRadius: 5,
+          pointHoverRadius: 8
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: { legend: { display: true } },
+        scales: {
+          y: { beginAtZero: false }
+        }
+      }
+    });
+  </script>
+</body>
+</html>
