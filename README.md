@@ -121,13 +121,16 @@ Then open your browser and visit 👉 🚀 http://127.0.0.1:5000
     📊 Include historical comparison graphs
 
 💬 Thank You for Visiting 🌿
+
     Wave is where tea tradition meets artificial intelligence.
     Predict tea prices smartly, explore market trends, and sip innovation every day! 🍵
 
 👨‍💻 Author
-  Abishanthan Sarawanaraja
-  Software Engineer
-  📧 abishan@example.com
+
+    Abishanthan Sarawanaraja
+    Software Engineer
+    📧 abishan@example.com
 
 📁 Demo
-  visit 👉 
+
+    visit 👉 
