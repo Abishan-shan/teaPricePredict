@@ -13,7 +13,7 @@ body {
   scroll-behavior: smooth;
 }
 
-/* Background Canvas */
+
 canvas#wave-canvas {
   position: fixed;
   top: 0;
@@ -21,7 +21,7 @@ canvas#wave-canvas {
   z-index: 0;
 }
 
-/* Navbar */
+
 .navbar {
   position: fixed;
   top: 0;
@@ -61,7 +61,7 @@ canvas#wave-canvas {
   color: #FFD700;
 }
 
-/* Section Layout */
+
 .section {
   min-height: 100vh;
   padding: 120px 20px;
@@ -74,7 +74,7 @@ canvas#wave-canvas {
   z-index: 1;
 }
 
-/* Home */
+
 #home {
   background: rgba(0, 0, 0, 0.6);
 }
@@ -116,7 +116,7 @@ canvas#wave-canvas {
   transform: translateY(-4px);
 }
 
-/* About */
+
 .about-section {
   background: linear-gradient(135deg, rgba(20,20,20,0.95), rgba(30,30,30,0.8));
 }
@@ -135,7 +135,7 @@ canvas#wave-canvas {
   margin: 10px auto;
 }
 
-/* Contact */
+
 .contact-section {
   background: rgba(15,15,15,0.9);
 }
@@ -187,10 +187,6 @@ canvas#wave-canvas {
 }
 
 
-
-/*  prediction page  */
-
-/* Main content */
 main {
     flex: 1;
     padding: 40px;
@@ -203,7 +199,7 @@ main h1 {
     color: #1e2a38;
 }
 
-/* Form styling */
+
 form {
     display: flex;
     flex-direction: column;
@@ -224,20 +220,20 @@ form select, form input[type="date"] {
 }
 
 .login-btn {
-    background-color: #1e90ff; /* Dodger Blue */
+    background-color: #1e90ff;
     color: white;
     border: none;
-    border-radius: 8px;       /* Rounded corners */
-    padding: 10px 20px;       /* More clickable area */
+    border-radius: 8px;
+    padding: 10px 20px;
     cursor: pointer;
     font-size: 1em;
     font-weight: bold;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* subtle shadow */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
 .login-btn:hover {
-    background-color: #0d6efd; /* darker blue */
-    transform: translateY(-2px); /* subtle lift on hover */
+    background-color: #0d6efd;
+    transform: translateY(-2px);
     box-shadow: 0 6px 10px rgba(0,0,0,0.15);
 }

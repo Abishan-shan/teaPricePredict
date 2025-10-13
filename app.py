@@ -5,7 +5,7 @@ from prophetModel.model import model
 from datetime import datetime, timedelta
 
 app = Flask(__name__)
-app.secret_key = "wave_secret_123"  # Temporary session key
+app.secret_key = "wave_secret_123"
 
 ADMIN_USER = "admin"
 ADMIN_PASS = "1234"
@@ -23,13 +23,11 @@ def get_weekly_prices(tea_type):
     return dates[::-1], prices[::-1]
 
 
-# Home / Landing Page
 @app.route('/')
 def index():
     return render_template('index.html')
 
 
-# Login Page
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
@@ -65,10 +63,8 @@ def dashboard():
                            selected_tea=tea_type)
 
 
-# Predict Page
 @app.route('/predict', methods=['GET', 'POST'])
 def predict():
-
     if 'user' not in session:
         return redirect(url_for('login'))
 
@@ -81,10 +77,10 @@ def predict():
 
         result = model(tea_type, picked_date)
 
-    return render_template('predict.html', result=result, picked_date=picked_date, tea_types=TEA_TYPES, tea_type=tea_type)
+    return render_template('predict.html', result=result, picked_date=picked_date, tea_types=TEA_TYPES,
+                           tea_type=tea_type)
 
 
-# Logout
 @app.route('/logout')
 def logout():
     session.clear()

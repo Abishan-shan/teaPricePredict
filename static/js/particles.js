@@ -22,14 +22,14 @@ for (let i = 0; i < 25; i++) {
 function drawWaves() {
   const time = Date.now() / 1000;
 
-  // Background gradient
+
   const grad = ctx.createLinearGradient(0, 0, 0, canvas.height);
   grad.addColorStop(0, "#000");
   grad.addColorStop(1, "#111");
   ctx.fillStyle = grad;
   ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-  // Gold wave line
+
   ctx.beginPath();
   ctx.moveTo(0, canvas.height * 0.85);
   for (let x = 0; x < canvas.width; x++) {
@@ -45,7 +45,7 @@ function drawWaves() {
   ctx.fillStyle = "#FFD70020";
   ctx.fill();
 
-  // Bubbles floating
+
   ctx.fillStyle = "#FFD70055";
   bubbles.forEach(b => {
     ctx.beginPath();
