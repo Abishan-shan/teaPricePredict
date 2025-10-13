@@ -2,10 +2,10 @@
 
   Welcome to 🌊 Wave,
   an AI-powered Tea Price Prediction app built using Facebook Prophet — a smart forecasting model that predicts daily tea prices based on real market data.
-  
   Wave helps farmers, traders, and tea lovers make better decisions by forecasting future prices of various tea types.
 
   🍃 What This App Does
+  
       Wave predicts the future price of tea by analyzing past data.
       You can simply:
           1. Select your tea type (Ceylon Black, Green Tea, Herbal Tea, etc.)
@@ -14,6 +14,7 @@
   ➡️ The system will instantly show the expected tea price for that day!
 
   🍃 How It Works
+  
         The app uses Facebook Prophet, an AI model developed by Meta for time-series forecasting.
         Think of Prophet as a smart assistant that studies past price trends and predicts future values automatically.
         
@@ -30,6 +31,7 @@
 
   💻 App Overview
       Here’s how to use the Wave App step by step 👇
+      
       🏠 Step 1: Open the App
           When you open Wave, you’ll see a simple landing page with navigation links:
               1. Home – App overview
@@ -63,6 +65,7 @@
 
 
   📁 Dataset Details
+  
       The model is trained on real tea market data, formatted like this:
           Date	Tea Type	Price (LKR)
           2025-09-01	Ceylon Black	450
@@ -72,6 +75,7 @@
         This data helps Prophet learn daily trends, seasonal effects, and market behavior to make accurate forecasts.
 
  ⚙ Behind the Scenes
+ 
     🧹 Data Preparation – Tea data is cleaned and formatted
     🧠 Model Training – Prophet learns price trends from history
     💾 Model Saving – The trained model is stored in the backend
@@ -80,6 +84,7 @@
    
  
  🧩 Technology Stack
+ 
     Backend	: Python (Flask)
     Frontend :	HTML, CSS
     AI Model :	Facebook Prophet
@@ -87,6 +92,7 @@
 
 
 🚀 How to Run the App (Local Setup) => for developers
+
     # 1️⃣ Clone the repository
       git clone https://github.com/Abishan-shan/tea-price-predictor.git
       cd tea-price-predictor
@@ -101,6 +107,7 @@ Then open your browser and visit 👉 🚀 http://127.0.0.1:5000
 
 
 🌟 Why Choose Wave
+
     ✅ Easy-to-use interface
     ✅ Fast & accurate AI predictions
     ✅ Supports multiple tea varieties
@@ -108,6 +115,7 @@ Then open your browser and visit 👉 🚀 http://127.0.0.1:5000
     ✅ Designed for real-world users
 
 🔮 Future Improvements
+
     📉 Add charts showing price trends
     🌦️ Integrate weather & export data
     📊 Include historical comparison graphs
