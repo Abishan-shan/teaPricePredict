@@ -133,4 +133,4 @@ Then open your browser and visit 👉 🚀 http://127.0.0.1:5000
 
 📁 Demo
 
-    visit 👉 https://drive.google.com/drive/folders/1NcA3Q83DAScdA0QPWpJKo2VIJviP30SH?usp=sharing
+    visit 👉 : 🎥 Click here to view Model & Demo Video on Google Drive
