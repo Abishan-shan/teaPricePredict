@@ -110,7 +110,7 @@
       1. Required larger datasets
       2. Overfitted or did not generalize well
     
-    - DAI (Driverless AI) or other advanced ML frameworks were not used in this version, but the app architecture is compatible and can be extended in the future for                 automated feature engineering or enhanced model performance.
+    - DAI (Driverless AI) or other advanced ML frameworks were not used in this version, but the app architecture is compatible and can be extended in the future for automated        feature engineering or enhanced model performance.
 
 
  ⚙ Behind the Scenes
