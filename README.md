@@ -1,7 +1,7 @@
 🌿 Wave App: Tea Price Predictor
 
   Welcome to 🌊 Wave,
-  an AI-powered Tea Price Prediction app built using Facebook Prophet — a smart forecasting model that predicts daily tea prices based on real market data.
+  An AI-powered Tea Price Prediction app built using Facebook Prophet — a smart forecasting model that predicts daily tea prices based on real market data.
   Wave helps farmers, traders, and tea lovers make better decisions by forecasting future prices of various tea types.
 
   🍃 What This App Does
@@ -18,7 +18,7 @@
         The app uses Facebook Prophet, an AI model developed by Meta for time-series forecasting.
         Think of Prophet as a smart assistant that studies past price trends and predicts future values automatically.
         
-        Other models like Linear Regression or etc were tested but didn’t fit well because:
+        Other models, like Linear Regression or etc, were tested but didn’t fit well because:
                 They don’t handle seasonal changes effectively
                 They require heavy manual tuning
 
@@ -26,7 +26,7 @@
               ✅ Understands seasonal patterns (like daily or monthly price changes)
               ✅ Works even with missing or irregular data
               ✅ Delivers fast, accurate predictions
-              ✅ Is ideal for small, real-world datasets like tea markets
+              ✅ It is ideal for small, real-world datasets like tea markets
 
 
   💻 App Overview
@@ -37,7 +37,7 @@
               1. Home – App overview
               2. About – Learn about the app
               3. Contact – Send us feedback or questions
-          Click " Start Prediction " button to begin.
+          Click the " Start Prediction " button to begin.
       🔐 Step 2: Login
           Enter the following demo credentials:
             Username: Admin  
@@ -48,7 +48,7 @@
             🏠 Dashboard – Shows a 7-week price trend for each tea type with easy-to-read graphs and the average price over the past 7 days. 
             💹 Predict Price – Where you make predictions
             🚪 Logout – Exit the app
-          Click " Predict Price " button to start forecasting.
+          Click the " Predict Price " button to start forecasting.
       💡 Step 4: Predict the Tea Price
           1. Select your Tea Type (e.g., “Ceylon Black”)
           2. Pick a Date (any future day)
@@ -63,7 +63,31 @@
           The prediction result appears in a neat result card showing your forecast.
           You can modify the date or tea type anytime to explore more predictions.
 
+  1️⃣ Installation & Setup
 
+    1. Clone the Repository
+          ```bash
+            git clone https://github.com/Abishan-shan/teaPricePredict.git
+            cd teaPricePredict
+    2. Create a Virtual Environment
+        python -m venv venv
+        venv\Scripts\activate  # Windows
+        # or
+        source venv/bin/activate  # Mac/Linux
+    3. Install Dependencies
+        pip install -r requirements.txt
+    4. Run the App
+        python app.py
+    5. Open your browser and visit: http://127.0.0.1:5000
+    
+  2️⃣ 🐳 Docker Instructions : fast setup [🔗 https://hub.docker.com/r/abishanshan/teapricepredictapp]
+
+      1. Pull the pre-built Docker image:
+          ```bash
+          docker pull abishanshan/teapricepredictapp:latest
+      2. docker run -p 5000:5000 abishanshan/teapricepredictapp
+      3. Open your browser and visit: http://127.0.0.1:5000
+      
   📁 Dataset Details
   
       The model is trained on real tea market data, formatted like this:
@@ -73,6 +97,20 @@
           2025-09-03	Herbal Tea	540
      📊 The dataset captures daily price movements of popular teas sold in the Colombo tea market.
         This data helps Prophet learn daily trends, seasonal effects, and market behavior to make accurate forecasts.
+        
+ 🧠 ML Frameworks & Model Choice
+
+    - The model is currently built using **Facebook Prophet** because it works well with small, real-world time-series datasets and automatically handles:
+      1. Seasonal trends
+      2. Missing or irregular data
+      3. Fast, accurate predictions
+    
+    - Other ML frameworks, such as **Linear Regression, ARIMA, and LSTM**, were evaluated but:
+      1. Required larger datasets
+      2. Overfitted or did not generalize well
+    
+    - **\DAI (Driverless AI)** or other advanced ML frameworks were not used in this version, but the app architecture is compatible and can be extended in the future for                 automated feature engineering or enhanced model performance.
+
 
  ⚙ Behind the Scenes
  
@@ -96,7 +134,7 @@
     # 1️⃣ Clone the repository
       git clone https://github.com/Abishan-shan/tea-price-predictor.git
       cd tea-price-predictor
-    # 2️⃣ Create virtual environment
+    # 2️⃣ Create a virtual environment
       python -m venv venv
       venv\Scripts\activate   # (for Windows)
     # 3️⃣ Install dependencies
@@ -133,4 +171,4 @@ Then open your browser and visit 👉 🚀 http://127.0.0.1:5000
 
 📁 Demo
 
-    visit 👉 : 🎥 under /DemoVideos Folder you can see demo videos
+    visit 👉 : 🎥 under /demoVideo Folder, you can see demo videos
