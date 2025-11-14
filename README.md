@@ -168,7 +168,7 @@ Then open your browser and visit 👉 🚀 http://127.0.0.1:5000
 
     Abishanthan Sarawanaraja
     Software Engineer
-    📧 abishan@example.com
+    📧 abishanshan61@gmail.com
 
 📁 Demo
 
