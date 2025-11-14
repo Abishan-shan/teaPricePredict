@@ -66,13 +66,13 @@
   1️⃣ Installation & Setup
 
     1. Clone the Repository
-          ```bash
-            git clone https://github.com/Abishan-shan/teaPricePredict.git
-            cd teaPricePredict
+        ```bash
+        git clone https://github.com/Abishan-shan/teaPricePredict.git
+        cd teaPricePredict
     2. Create a Virtual Environment
         python -m venv venv
         venv\Scripts\activate  # Windows
-        # or
+                 or
         source venv/bin/activate  # Mac/Linux
     3. Install Dependencies
         pip install -r requirements.txt
@@ -87,7 +87,8 @@
           docker pull abishanshan/teapricepredictapp:latest
       2. docker run -p 5000:5000 abishanshan/teapricepredictapp
       3. Open your browser and visit: http://127.0.0.1:5000
-      
+
+  
   📁 Dataset Details
   
       The model is trained on real tea market data, formatted like this:
@@ -105,11 +106,11 @@
       2. Missing or irregular data
       3. Fast, accurate predictions
     
-    - Other ML frameworks, such as **Linear Regression, ARIMA, and LSTM**, were evaluated but:
+    - Other ML frameworks, such as **Linear Regression, ARIMA, and LSTM**, were evaluated, but:
       1. Required larger datasets
       2. Overfitted or did not generalize well
     
-    - **\DAI (Driverless AI)** or other advanced ML frameworks were not used in this version, but the app architecture is compatible and can be extended in the future for                 automated feature engineering or enhanced model performance.
+    - DAI (Driverless AI) or other advanced ML frameworks were not used in this version, but the app architecture is compatible and can be extended in the future for                 automated feature engineering or enhanced model performance.
 
 
  ⚙ Behind the Scenes
